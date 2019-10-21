@@ -1,0 +1,6 @@
+CREATE TABLE service (
+	record_id   TEXT (24)  PRIMARY KEY,  -- Data type: "YYYY-MM-DD-HH-MM-SS-xxxx": where xxxx is a random alpha-numeric  string. Day and time must be valid.
+	service_id  TEXT (2)   NOT NULL,     -- Data type: 1 or 2 characters alpha-numeric string. Lowercase letters.
+	addr        TEXT (39)  NOT NULL,     -- Data type: Valid ipv4 or ipv6 (i.e. xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx) address.
+	port        MEDIUMINT  NOT NULL      -- Data type: Valid network port.
+);
